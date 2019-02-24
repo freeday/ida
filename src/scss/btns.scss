@@ -12,4 +12,13 @@
       background-color: $btnSimpleTop;
       @include gradient($btnSimpleTop, $btnSimpleBottom);
     }
+    &-s {
+      padding: 5px 10px 5px;
+    }
+    &-nofill {
+      background-color: transparent;
+      border: 1px solid $labelFontColor;
+      font-size: 12px;
+      color: $labelFontColor;
+    }
 }

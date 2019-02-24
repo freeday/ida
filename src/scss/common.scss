@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: inline-block;
   width: $containerDekstopWidth;
   vertical-align: top;
@@ -109,4 +110,10 @@
   &-num {
     padding-bottom: 10px;
   }
+}
+.btn.btn-nofill {
+  position: absolute;
+  display: none;
+  top: 10px;
+  left: 248px;
 }
