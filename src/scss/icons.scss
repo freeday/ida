@@ -1,0 +1,19 @@
+.icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  &-quest {
+    &:before {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      content: "?";
+      border: 1px solid $placeholderFontColorActive;
+      @include border-radius(50%);
+      @include box-sizing()
+      color: $placeholderFontColorActive;
+      font-size: $sFontSize;
+      text-align: center;
+    }
+  }
+}

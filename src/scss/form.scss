@@ -1,0 +1,82 @@
+.form {
+  &-input {
+    display: inline-block;
+    height: 42px;
+    @include box-sizing();
+    margin-right: 9px;
+    border: 1px solid $inputBorderColor;
+    &-error {
+      border: 1px solid #FF0000!important;
+    }
+    &-fi {
+      width: 319px;
+      margin-right: 0;
+      .input {
+        padding-left: 15px;
+        text-align: left;
+      }
+    }
+    &-num {
+      width: 65px;
+    }
+    &-cvv {
+      width: 136px;
+    }
+  }
+  &-select {
+    position: relative;
+    display: inline-block;
+    margin-right: 9px;
+    border: 1px solid $inputBorderColor;
+    height: 42px;
+    border-radius: 0;
+    background: #fff;
+    > select {
+      width: 100%;
+      height: 42px;
+      padding-left: 15px;
+      padding-right: 34px;
+      border: 0;
+      background: transparent;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      font-size: $sFontSize;
+      &::-ms-expand {
+        display: none;
+      }
+    }
+    &-arrow {
+      position: absolute;
+      border: 8px solid transparent;
+      border-bottom: 0;
+      right: 11px;
+      &:nth-child(2) {
+        top: 18px;
+        border-top-color: $inputBorderColor;
+      }
+      &:nth-child(3) {
+        top: 16px;
+        border-top-color: #FFF;
+      }
+    }
+  }
+}
+
+.input {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  @include box-sizing();
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: $sFontSize;
+  font-family: Arial;
+  @include placeholder {
+    color: $placeholderFontColorActive;
+    font-family: Arial;
+    text-align: left;
+  }
+}
