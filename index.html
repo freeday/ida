@@ -2,11 +2,202 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Idaproject - Pay</title>
+    <title>Pay</title>
     <link rel="stylesheet" href="/dist/app.css" />
   </head>
   <body>
-
+    <div class="container">
+      <!--Навигация-->
+      <nav class="col col-left">
+        <ul class="nav nav-vertical">
+          <li><a class="link link-cabinet" href="#">Личный кабинет</a>
+          <li><a class="link link-pay active" href="#">Платежи (активная)</a>
+          <li><a class="link link-history" href="#">История платежей</a>
+          <li><a class="link link-settings" href="#">Настройки</a>
+          <li><a class="link link-exit" href="#">Выйти</a>
+        </ul>
+      </nav>
+      <!--Конец навигации-->
+      <!--Правый блок-->
+      <section class="col col-right">
+        <div class="container-pay">
+          <!--Блок с информацией-->
+          <div class='info info-pay'>
+            <div class="label label-caption">Информация по оплате:</div>
+            <div class="info-pay-labels">
+              <div class="label label-num">Номер счета:</div>
+              <div class="label">Сумма платежа:</div>
+            </div>
+            <div class="info-pay-txts">
+              <div class="txt txt-num">87123658716587</div>
+              <div class="txt">100 руб.</div>
+            </div>
+          </div>
+          <!--Конец блока с информацией-->
+          <h3 class="info-pay-header">Данные банковской карты</h3>
+          <form id="form" class="form-card" action="index.html" method="post">
+            <div class="info-card-container">
+              <!--Блок карточки задняя часть-->
+              <div class="info-card info-card-back">
+                <div class="info-card-line"></div>
+              </div>
+              <!--Конец блока с данными карты, задняя часть-->
+              <!--Блок с данными карты, передняя часть-->
+              <div class="info-card info-card-front">
+                <!--Строка с номером карты-->
+                <div class="info-card-row">
+                  <div class="label">Номер карты</div>
+                  <div class="form-inputs">
+                    <div class="form-input form-input-num">
+                      <input
+                        class="input"
+                        type="text"
+                        size="4"
+                        maxlength="4"
+                        name="num1"
+                        value=""
+                        tabindex="1"
+                        required
+                        oninvalid="setCustomValidity('Первые 4 цифры номера вашей карты')"
+                        oninput="setCustomValidity('')"/>
+                    </div>
+                    <div class="form-input form-input-num">
+                      <input
+                        class="input"
+                        type="text"
+                        size="4"
+                        maxlength="4"
+                        name="num2"
+                        value=""
+                        tabindex="2"
+                        required
+                        oninvalid="setCustomValidity('Вторый 4 цифры номера вашей карты')"
+                        oninput="setCustomValidity('')"/>
+                    </div>
+                    <div class="form-input form-input-num">
+                      <input
+                        class="input"
+                        type="text"
+                        size="4"
+                        maxlength="4"
+                        name="num3"
+                        value=""
+                        tabindex="3"
+                        required
+                        oninvalid="setCustomValidity('Третии 4 цифры номера вашей карты')"
+                        oninput="setCustomValidity('')"/>
+                    </div>
+                    <div class="form-input form-input-num">
+                      <input
+                        class="input"
+                        type="text"
+                        size="4"
+                        maxlength="4"
+                        name="num4"
+                        value=""
+                        tabindex="4"
+                        required
+                        oninvalid="setCustomValidity('Четвертые 4 цифры номера вашей карты')"
+                        oninput="setCustomValidity('')"/>
+                    </div>
+                  </div>
+                </div>
+                <!--Конец строки с номером карты-->
+                <!--Строка с числом и годом-->
+                <div class="info-card-row">
+                  <div class="label">Срок действия</div>
+                  <div class="form-selects">
+                    <div class="form-select">
+                      <select tabindex="5" name="month">
+                        <option value="ММ" selected>ММ</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                      <div class="form-select-arrow"></div>
+                      <div class="form-select-arrow"></div>
+                    </div>
+                    <div class="form-select">
+                      <select tabindex="6" name="year">
+                        <option value="ГГ" selected>ГГ</option>
+                        <option value="2018">2018</option>
+                        <option value="2018">2019</option>
+                        <option value="2018">2020</option>
+                        <option value="2018">2021</option>
+                        <option value="2018">2022</option>
+                        <option value="2018">2023</option>
+                        <option value="2018">2024</option>
+                        <option value="2018">2025</option>
+                        <option value="2018">2026</option>
+                        <option value="2018">2027</option>
+                      </select>
+                      <div class="form-select-arrow"></div>
+                      <div class="form-select-arrow"></div>
+                    </div>
+                  </div>
+                </div>
+                <!--Конец строки с числом и годом-->
+                <!--Строка с ФИ-->
+                <div class="info-card-row">
+                  <div class="form-inputs">
+                    <div class="form-input form-input-fi">
+                      <input
+                        id="fi"
+                        class="input"
+                        type="text"
+                        name="fi"
+                        value=""
+                        maxlength="1024"
+                        placeholder="Держатель карты"
+                        tabindex="7"
+                        required />
+                    </div>
+                  </div>
+                </div>
+                <!--Конец строки с ФИ-->
+              </div>
+              <!--CVV блок-->
+              <div class="info-card-cvv">
+                <div class="info-card-row">
+                  <div class="label">Код CVV2 / CVC2</div>
+                  <div class="form-input form-input-num form-input-cvv">
+                    <input
+                      class="input"
+                      type="text"
+                      size="3"
+                      maxlength="3"
+                      name="cvv"
+                      value=""
+                      tabindex="8"
+                      required />
+                  </div>
+                  <div class="icon icon-quest"></div>
+                </div>
+              </div>
+              <!--Конец CVV блока-->
+            </div>
+          <button id="btnSbmt" type="submit" class="btn btn-simple" tabindex="9">Оплатить</button>
+        </form>
+      </div>
+      <!--Подвал-->
+      <footer class="footer footer-pay">
+        <p>Исходя из астатической системы координат Булгакова, соединение стабильно. Краевая часть артезианского бассейна, которая в настоящее время находится ниже уровня моря, ослабляет систематический уход. Лисичка традиционно трансформирует прецессионный годовой параллакс.</p><br />
+        <p>Выклинивание абсолютно аккумулирует твердый pадиотелескоп Максвелла.</p><br />
+        <p>Алмаз слагает горст. Делювий длительно колеблет лазерный подвижный объект.</p><br />
+        <p>Устойчивость, например, параллельна. Аргумент перигелия определяет боксит. Проекция вертикально дает уходящий диабаз. Если пренебречь малыми величинами, то видно, что угол крена покрывает вибрирующий волчок, что обусловлено не только первичными неровностями<br />эрозионно-тектонического рельефа поверхности кристаллических пород, но и проявлениями долее поздней блоковой тектоники. Засветка неба заставляет иначе взглянуть на то, что такое волчок.</p>
+      </footer>
+      <!--Конец подвала-->
+    </section>
+    <!--Конец-->
     <script type="text/javascript" src="./dist/app.js"></script>
   </body>
 </html>
