@@ -1,0 +1,36 @@
+.nav {
+  display: block;
+  width: $navDekstopWidth;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: #20232b;
+  letter-spacing: 1px;
+  li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  .link {
+    display: block;
+    @include box-sizing();
+    padding: 25px 30px;
+    margin-bottom: 1px;
+    background-color: $navBg;
+    color: $navFontColor;
+    font-size: rem($mFontSize);
+    font-weight: bold;
+    @include transition();
+    &:hover {
+      color: $navFontColorHover;
+    }
+    &.active {
+      background-color: $navBgActive;
+      color: $navFontColorHover;
+      @include transition(background-color .1s ease-out);
+    }
+    &-settings, &-exit {
+      background-color: #191c24;
+    }
+  }
+}
