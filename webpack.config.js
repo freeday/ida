@@ -54,7 +54,6 @@ let conf = {
           {
             loader: 'file-loader',
             options: {
-              // publicPath: 'fonts',
               outputPath: 'fonts',
               name: '[name].[ext]'
             }
