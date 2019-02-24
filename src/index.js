@@ -9,19 +9,7 @@ import './scss/main.scss'
 $(window).on('load', function () {
   $('#menu').on('click', function(e){
     e.stopPropagation()
-    var marginTop = '0'
-    var $el = $(e.target)
-    $el.toggleClass(function() {
-      if ($el.hasClass('open')) {
-        marginTop = '-1000px'
-        $el.removeClass('open')
-        return ' '
-      } else {
-        marginTop = '0'
-        return 'open'
-      }
-    })
-    $('.nav').css({marginTop: marginTop})
+    $('.nav').toggleClass('open')
   })
   var $form = $('form')
   var $input = $('#fi')
