@@ -26,7 +26,23 @@ let conf = {
         test: /\.css$/,
         use: [
           'style-loader',
-          'css-loader'
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              importLoaders: 1
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: 'src/js/postcss.config.js'
+              }
+            }
+          }
         ]
       },
       {
@@ -37,7 +53,17 @@ let conf = {
           {
             loader: 'css-loader',
             options: {
-              sourceMap: true
+              sourceMap: true,
+              importLoaders: 1
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              config: {
+                path: 'src/js/postcss.config.js'
+              }
             }
           },
           {
