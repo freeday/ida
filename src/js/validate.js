@@ -14,7 +14,7 @@ $.fn.validateForm = function() {
       flag = isNaN(parseInt(value))
     }
     if (tabIndex === 7) {
-      flag = !value.match(/[A-Za-z]$/)
+      flag = !value.match(/^[A-Za-z]+$/)
     }
     if (tabIndex === 8) {
       flag = value.length < 3 || !value.match(/^\d+$/)
