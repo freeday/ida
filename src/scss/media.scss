@@ -4,6 +4,9 @@
   }
   @media screen and (max-width: $containerTabletWidth) {
     width: $containerPhoneWidth;
+    .btn-nofill {
+      display: inline-block;
+    }
   }
 }
 .nav {
@@ -18,6 +21,7 @@
   }
   @media screen and (max-width: $containerTabletWidth) {
     width: $navPhoneWidth;
+    margin-top: -1000px;
   }
 }
 .container-pay {
