@@ -1,0 +1,89 @@
+.container {
+  @media screen and (max-width: $containerDekstopWidth) {
+    width: $containerTabletWidth;
+  }
+  @media screen and (max-width: $containerTabletWidth) {
+    width: $containerPhoneWidth;
+  }
+}
+.nav {
+  @media screen and (max-width: $containerDekstopWidth) {
+    width: $navTabletWidth;
+    .link {
+      font-size: 14px;
+      padding-left: 20px;
+      padding-right: 20px;
+      letter-spacing: normal;
+    }
+  }
+  @media screen and (max-width: $containerTabletWidth) {
+    width: $navPhoneWidth;
+  }
+}
+.container-pay {
+  @media screen and (max-width: $containerDekstopWidth) {
+    width: $containerTabletPayWidth;
+    padding-left: 20px;
+    padding-right: 20px;
+    .form-input-fi {
+      width: 287px;
+    }
+    .info-card {
+      &-back {
+        left: 105px;
+      }
+      &-front {
+        width: 319px;
+      }
+      &-cvv {
+        left: 330px;
+      }
+    }
+  }
+  @media screen and (max-width: $containerTabletWidth) {
+    width: 319px;
+    padding-left: 16px;
+    padding-right: 0px;
+    .info {
+      &-card {
+        width: auto;
+        height: 208px;
+        border: 0;
+        padding-left: 0;
+        padding-top: 0;
+        &-container {
+          height: 285px;
+        }
+        &-back {
+          display: none;
+        }
+        &-cvv {
+          left: 0;
+          top: 216px;
+        }
+      }
+      &-pay {
+        &-header {
+          font-size: 20px;
+          letter-spacing: 0px;
+        }
+        &-labels {
+          min-width: 150px;
+        }
+      }
+    }
+    .btn {
+      margin-left: 0;
+    }
+  }
+}
+.footer-pay {
+  @media screen and (max-width: $containerDekstopWidth) {
+    width: $containerTabletPayWidth;
+  }
+  @media screen and (max-width: $containerTabletWidth) {
+    width: 319px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

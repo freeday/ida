@@ -1,0 +1,15 @@
+.btn {
+    display: inline-block;
+    border-radius: 50px;
+    padding: 11px 31px 12px;
+    cursor: pointer;
+    color: $navFontColor;
+    font-size: $xsFontSize;
+    font-weight: bold;
+    border: 0;
+    outline: none;
+    &-simple {
+      background-color: $btnSimpleTop;
+      @include gradient($btnSimpleTop, $btnSimpleBottom);
+    }
+}

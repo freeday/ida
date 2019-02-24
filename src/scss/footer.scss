@@ -1,0 +1,14 @@
+.footer-pay {
+  width: $containerDekstopPayWidth;
+  @include box-sizing();
+  margin-left: 2px;
+  padding: 23px 45px 23px 28px;
+  background-color: $footerBg;
+  color: $footerFontColor;
+  font-size: $xxsFontSize;
+  font-family: $txtFontFace;
+  line-height: 10px;
+  > p {
+    line-height: 18px;
+  }
+}
