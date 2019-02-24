@@ -10,7 +10,7 @@ let conf = {
   output: {
     filename: '[name].js',
     path: path.join(__dirname, './dist'),
-    publicPath: '/dist/'
+    publicPath: '/'
   },
   devServer: {
     overlay: true

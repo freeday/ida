@@ -1,6 +1,7 @@
 import $ from 'jquery'
 import browser from 'bowser'
-import '../node_modules/overlayscrollbars/js/jquery.overlayScrollbars.js'
+import 'overlayscrollbars/js/jquery.overlayScrollbars.js'
+import 'overlayscrollbars/css/OverlayScrollbars.css'
 import './js/validate'
 import './js/selectron'
 import './scss/main.scss'
